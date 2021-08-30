@@ -2,7 +2,7 @@ package testeIntegration;
 
 public class Calculadora {
 
-	public static void somar1() {
+	public static int somar1() {
 		
 		int i = 1;
 		int k = 2;
@@ -10,15 +10,19 @@ public class Calculadora {
 		
 		soma = i + k;
 		
+		return soma;
+		
 	}
 	
-	public static void somar2() {
+	public static int somar2() {
 			
 			int i = 1;
 			int k = 2;
 			int soma;
 			
 			soma = i + k;
+			
+			return soma;
 			
 		}
 	
