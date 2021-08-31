@@ -35,6 +35,11 @@
                 </goals>
             </execution>
         </executions>
+        <configuration>
+                <excludes>
+                    <exclude>**/*.js</exclude>
+                </excludes>
+            </configuration>
     </plugin>
         </plugins>
     </build>    
