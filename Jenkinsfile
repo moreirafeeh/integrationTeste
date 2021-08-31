@@ -6,12 +6,12 @@ pipeline {
 				bat 'echo inicio'
 			}
 		}
-		stage('Rodando MAVEN'){
+		stage('Rodando MAVEN clean'){
 			steps {
 				bat 'mvn clean'
 			}
 		}
-		stage('Rodando MAVEN'){
+		stage('Rodando MAVEN TESTE'){
 			steps {
 				bat 'mvn test'
 			}
