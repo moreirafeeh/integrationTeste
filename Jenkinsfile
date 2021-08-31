@@ -30,9 +30,9 @@ pipeline {
 			}
 		}
 		
-		stage('Rodando MAVEN TESTE'){
+		stage('Fim da Esteira'){
 			steps {
-				bat 'mvn test'
+				bat 'echo FIM'
 			}
 		}
 		
