@@ -20,12 +20,13 @@ pipeline {
 			
 			environment {
 				scannerHome =  tool 'SONAR_SCANNER'
+				javatool =  tool 'JAVA_11'
 			}
 			
 			steps {
 				withSonarQubeEnv('SONAR_LOCAL'){
 				
-					bat "${scannerHome}/bin/sonar-scanner -e -Dsonar.projectKey=deploy_teste1 -Dsonar.host.url=http://localhost:9000 -Dsonar.login=303d72ccf3909bac85a6bd332b21e31bfab461cf -Dsonar.java.binaries=target -Dsonar.jacoco.reportPaths=C:/Users/Felipe/eclipse-workspace/testeIntegration/target/jacoco.exec -Dsonar.global.exclusions=**/*.js,**/*Test.java,target/**"
+					bat "${scannerHome}/bin/sonar-scanner -e -Dsonar.sources=${javatool} -Dsonar.projectKey=deploy_teste1 -Dsonar.host.url=http://localhost:9000 -Dsonar.login=303d72ccf3909bac85a6bd332b21e31bfab461cf -Dsonar.java.binaries=target -Dsonar.jacoco.reportPaths=C:/Users/Felipe/eclipse-workspace/testeIntegration/target/jacoco.exec -Dsonar.global.exclusions=**/*.js,**/*Test.java,target/**"
 				}
 			}
 		}
